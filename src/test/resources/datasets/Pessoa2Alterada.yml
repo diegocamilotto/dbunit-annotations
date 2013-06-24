@@ -1,0 +1,6 @@
+PESSOA:
+  - ID: 2
+    NOME: 'Joao Maria da Silva'
+    CPF: '11111111111'
+    ENDERECO: 'Avenida Silva'
+    SEXO: 'M'

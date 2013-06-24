@@ -1,0 +1,11 @@
+PESSOA:
+  - ID: 2
+    NOME: 'Joao da Silva'
+    CPF: '11111111111'
+    ENDERECO: 'Avenida Silva'
+    SEXO: 'M'
+USUARIO:
+  - ID: 1
+    LOGIN: 'SILVA'
+    SENHA: '123'
+    IDPESSOA: 2
