@@ -22,8 +22,8 @@ public class HSQLDBServer {
 
     public void start() {
 	HsqlProperties props = new HsqlProperties();
-	props.setProperty("server.database.0", "file:/hsqldtest");
-	props.setProperty("server.dbname.0", "PersistenceTests");
+	props.setProperty("server.database.0", "file:" + System.getProperty("user.home") + "/.dbunitannotations/db");
+	props.setProperty("server.dbname.0", "DBUnitAnnotations");
 	props.setProperty("server.port", "9001");
 
 	server.setProperties(props);
