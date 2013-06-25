@@ -17,7 +17,7 @@ public class HSQLDBClient {
 	    throw new SQLException();
 	}
 
-	connection = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost:9001/PersistenceTests");
+	connection = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost:9001/DBUnitAnnotations");
     }
 
     public int executeUpdate(String sql) throws SQLException {
