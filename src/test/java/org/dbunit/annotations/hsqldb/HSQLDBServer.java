@@ -7,7 +7,7 @@ import org.hsqldb.Server;
 import org.hsqldb.persist.HsqlProperties;
 
 /**
- * Classe utilitaria para executar um banco de dados HSQLDB embarcado.
+ * Utility class to run a embedded HSQLDB database.
  * 
  * @author diegocamilotto
  * 
