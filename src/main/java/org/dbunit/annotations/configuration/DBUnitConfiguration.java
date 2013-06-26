@@ -20,12 +20,14 @@ public class DBUnitConfiguration {
     private static final String KEY_SCRIPTS_DIR = "scriptsDir";
     private static final String KEY_DRIVER_CLASS = "driverClass";
     private static final String KEY_CONNECTION_URL = "connectionUrl";
+    private static final String KEY_SCHEMA = "schema";
     private static final String KEY_USER = "user";
     private static final String KEY_PASSWORD = "password";
 
     private final Properties properties;
     private String driverClass;
     private String connectionUrl;
+    private String schema;
     private String password;
     private String user;
     private String datasetsDir;
@@ -51,6 +53,7 @@ public class DBUnitConfiguration {
     private void loadConfigurations() {
 	driverClass = getProperty(KEY_DRIVER_CLASS);
 	connectionUrl = getProperty(KEY_CONNECTION_URL);
+	schema = getNullableProperty(KEY_SCHEMA);
 	user = getProperty(KEY_USER);
 	password = getProperty(KEY_PASSWORD);
 	datasetsDir = getProperty(KEY_DATASETS_DIR, DEFAULT_DATASETS_DIR);
@@ -69,8 +72,12 @@ public class DBUnitConfiguration {
 	} else if (defaultValue != null) {
 	    return defaultValue;
 	} else {
-	    throw new IllegalStateException("Propriedade '" + key + "' nao existe no arquivo de configuracao.");
+	    throw new IllegalStateException("Property '" + key + "' doesn't exist in configuration file.");
 	}
+    }
+
+    private String getNullableProperty(String key) {
+	return (String) properties.get(key);
     }
 
     public String getDriverClass() {
