@@ -108,7 +108,7 @@ public class DBUnitTest {
 
     private JdbcDatabaseTester getTester() throws ClassNotFoundException, FileNotFoundException, IOException {
 	return new JdbcDatabaseTester(dbUnitConfiguration.getDriverClass(), dbUnitConfiguration.getConnectionUrl(),
-		dbUnitConfiguration.getUser(), dbUnitConfiguration.getPassword());
+		dbUnitConfiguration.getUser(), dbUnitConfiguration.getPassword(), dbUnitConfiguration.getSchema());
     }
 
     /**

@@ -104,4 +104,8 @@ public class DBUnitConfiguration {
 	return scriptsDir;
     }
 
+    public String getSchema() {
+	return schema;
+    }
+
 }
